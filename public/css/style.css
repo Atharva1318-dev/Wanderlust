@@ -1,4 +1,6 @@
 body {
+    margin: 0 !important;
+    padding: 0 !important;
     overflow-x: hidden !important;
     font-family: "Poppins", sans-serif !important;
     /* background-color: #ffffff; */
@@ -246,7 +248,7 @@ footer{
     padding: 0.75rem 1.45rem 0.75rem 1.45rem !important;
 }
 .listing-card img{
-    width: 100%;
+    width: 100% !important;
     border-radius: 1.5rem;
     /* border-top-right-radius: 1.5rem;
     border-top-left-radius: 1.5rem; */
