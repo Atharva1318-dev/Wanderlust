@@ -473,8 +473,19 @@ width:64%;
     .nav-div{
         padding: 0 0 0 0.85rem !important;
     }
+    .listing-card{
+        margin-left: 0.7rem !important;
+    }
+    nav{
+        margin: 0.75rem 0.1rem 0.75rem 0.1rem !important;
+    }
 }
 
+@media(max-width:412px){
+    .listing-card{
+        margin-left: 0.18rem !important;
+    }
+}
 
 .visibleOnSmall{
     display: none !important;
