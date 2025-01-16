@@ -1,0 +1,62 @@
+<% layout("/layouts/boilerplate")-%>
+
+    <body>
+        <div data-bg="<%=listing.image%>" class="overlay-background edit"></div>
+        <div class="row gy-5 form-body">
+            <div class="offset-2 col-8">
+                <form method="post" action="/listings/<%=listing._id%>?_method=PUT"
+                    class="new-form py-4 px-4 needs-validation" novalidate enctype="multipart/form-data">
+                    <h3 class="text-center">Edit your Listing</h3>
+                    <hr>
+                    <div class="mb-2">
+                        <label for="title" class="form-label fs-5">Title</label>
+                        <input type="text" name="title" class="form-control rounded-4 shadow-sm cStyle"
+                            value="<%=listing.title%>" required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <br>
+                    <div class="mb-2">
+                        <div class="mx-auto" style="width:70%;height:24rem">
+                            <img src="<%=originalImageUrl%>" class="card-img-top rounded-4" alt="listing_image">
+                        </div>
+                        <label for="image" class="form-label fs-5">Upload New Image</label>
+                        <input type="file" name="image" id="image" class="form-control rounded-4 shadow-sm cStyle">
+
+                    </div>
+                    <br>
+                    <div class="mb-2">
+                        <label for="desc" class="form-label fs-5">Description</label>
+                        <textarea class="form-control rounded-4 shadow-sm cStyle" name="description"
+                            required><%= listing.description %></textarea>
+                        <div class="invalid-feedback">Please enter an appropriate description!</div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-4 mb-2">
+                            <label for="price" class="form-label fs-5">Price</label><input type="number"
+                                class="form-control rounded-4 shadow-sm cStyle" name="price" value="<%=listing.price%>"
+                                required>
+                            <div class="invalid-feedback">Please enter a valid price!</div>
+                        </div>
+                        <br>
+                        <div class="col-lg-8 mb-2">
+                            <label for="country" class="form-label fs-5">Country</label>
+                            <input type="text" name="country" class="form-control rounded-4 shadow-sm  cStyle"
+                                value="<%=listing.country%>" required>
+                            <div class="invalid-feedback">Please enter the country!</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="mb-2">
+                        <label for="loc" class="form-label fs-5">Location</label>
+                        <input type="text" name="location" id="loc" class="form-control rounded-4 shadow-sm cStyle"
+                            value="<%=listing.location%>" required>
+                        <div class="invalid-feedback">Please enter a valid location!</div>
+                    </div>
+                    <br>
+                    <button class="btn btn-outline-dark mb-4 shadow-sm new-btn rounded-4"><i
+                            class="fa-regular fa-pen-to-square"></i></button>
+                </form>
+            </div>
+        </div>
+    </body>

@@ -1,0 +1,203 @@
+<% layout("/layouts/boilerplate")-%>
+    <script>
+        const coordinates = <%- JSON.stringify(listing.geometry.coordinates) %>;// It converts a JavaScript object or value into a JSON string.
+    </script>
+
+    <h3 class=" text-center">
+        <%=listing.title%>
+    </h3>
+    <hr>
+    <br>
+    <div class="row gap-4 mb-4">
+        <div class="listing-card d-sm-col-7 d-sm-offset-3 mx-auto" style="max-width: 46rem;">
+            <div id="carouselExample" class="carousel slide listingCardOnSmall">
+                <div class="carousel-inner rounded-4" style="height: 23rem;">
+                    <div class="carousel-item active" style="height: 30rem; width: 100%;">
+                        <img src="<%=listing.image.url%>" style="height: 22rem; width: 100%;" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item" style="height: 18rem;">
+                        <img src="<%=listing.image.url%>" style="height: 22rem; width: 100%;" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item" style="height: 18rem;">
+                        <img src="<%=listing.image.url%>" style="height: 22rem; width: 100%;" class="d-block w-100"
+                            alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <p><i>
+                        Owned by <%=listing.owner.username%>
+                    </i></p>
+                <h6 class="mb-3 card-text opacity-85">
+                    <%=listing.description%>
+                </h6>
+                <p class="card-text">
+                    &#8377;<%=listing.price.toLocaleString("en-IN")%>/night
+                </p>
+                <p class="card-text opacity-80">
+                    <%=listing.location%>
+                </p>
+                <p class="card-text opacity-80">
+                    <%=listing.country%>
+                </p>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center align-items-center mb-2">
+            <% if((currUser) && (currUser.username===listing.owner.username)){%>
+                <form action="/listings/<%=listing._id%>/edit" method="get">
+                    <button class="btn mb-4 new-btn"><i
+                            class="fa-regular fa-pen-to-square fs-5 shadow-sm pr-3"></i></button>
+                </form>
+                <form action="/listings/<%=listing._id%>?_method=DELETE" method="post" class="ml-2">
+                    <button class="btn mb-4 new-btn"><i class="fa-solid fa-trash fs-5 shadow-sm pl-5 mr-5"></i></button>
+                </form>
+                <%}else{%>
+                    <form action="/listings/<%=listing._id%>/edit" method="get">
+                        <button class="btn mb-4 new-btn rounded-3 mr-2 disabled"><i
+                                class="fa-regular fa-pen-to-square fs-5 shadow-sm pr-3"></i></button>
+                    </form>
+
+                    <form action="/listings/<%=listing._id%>?_method=DELETE" method="post" class="ml-2">
+                        <button class="btn mb-4 new-btn rounded-3 ml-2 disabled"><i
+                                class="fa-solid fa-trash fs-5 shadow-sm pl-5 mr-5"></i></button>
+                    </form>
+                    <% }%>
+        </div>
+
+        <%if(currUser){%>
+            <hr>
+            <form method="post" action="/listings/<%=listing._id%>/reviews" class="needs-validation" novalidate>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h4>Leave a review</h4>
+                    <br>
+                    <div>
+                        <label for="review[rating]" class="form-label"> Rating</label>
+                        <fieldset class="starability-grow">
+                            <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1"
+                                checked aria-label="No rating." />
+                            <input type="radio" id="first-rate1" name="review[rating]" value="1" />
+                            <label for="first-rate1" title="Terrible">1 star</label>
+                            <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+                            <label for="first-rate2" title="Not good">2 stars</label>
+                            <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+                            <label for="first-rate3" title="Average">3 stars</label>
+                            <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+                            <label for="first-rate4" title="Very good">4 stars</label>
+                            <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+                            <label for="first-rate5" title="Amazing">5 stars</label>
+                        </fieldset>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="comment" class="ml-5 form-label">Comment</label>
+                        <textarea name="review[comment]" cols="50" rows="5" class="form-control cStyle"
+                            required></textarea>
+                        <div class="invalid-feedback">Please leave a comment!</div>
+                    </div>
+                    <br>
+                    <button type="submit" id="reviewBtn">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Submit</span>
+                    </button>
+                </div>
+            </form>
+            <%}%>
+                <hr>
+                <%if(listing.reviews.length){%>
+                    <h5 class="text-center">All Reviews</h5>
+                    <%}%>
+                        <%if(listing.reviews){%>
+                            <div class="row offset-1">
+                                <%for(review of listing.reviews){%>
+                                    <div class="card col-5 m-3 review-box">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <%=review.author.username%>
+                                            </h5>
+                                            <p class="starability-result card-text" data-rating="<%=review.rating%>">
+                                                Rated: 3 stars
+                                            </p>
+
+                                            <h6 class="card-text">
+                                                <%=review.comment%>
+                                            </h6>
+                                            <hr>
+                                            <form method="post"
+                                                action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE">
+                                                <button class="btn new-btn"><i class="fa-solid fa-trash"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <%}%>
+                            </div>
+                            <%}%>
+    </div>
+    <h4 class="text-center">Where you'll be</h4>
+    <div id="map" class="mx-auto rounded-4"></div>
+    <!-- <script>
+        const coordinates = <%- JSON.stringify(listing.geometry.coordinates) %>;
+        console.log(coordinates);
+        const map = new maplibregl.Map({
+            container: 'map', // container id
+            style: {
+                'version': 8,
+                'name': 'Blank',
+                'center': [0, 0],
+                'zoom': 0,
+                'sources': {
+                    'raster-tiles': {
+                        'type': 'raster',
+                        'tiles': ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+                        'tileSize': 256,
+                        'minzoom': 0,
+                        'maxzoom': 19
+                    }
+                },
+                'layers': [
+                    {
+                        'id': 'background',
+                        'type': 'background',
+                        'paint': {
+                            'background-color': '#e0dfdf'
+                        }
+                    },
+                    {
+                        'id': 'simple-tiles',
+                        'type': 'raster',
+                        'source': 'raster-tiles'
+                    }
+                ],
+                'id': 'blank'
+            },
+            center: coordinates,
+            zoom: 11,
+            pitch: 40,
+            bearing: 20,
+            antialias: true
+        });
+        const marker = new maplibregl.Marker({ color: "red" })
+            .setLngLat(coordinates)
+            .addTo(map);
+    </script> -->
+    <script src="/js/map.js"></script>

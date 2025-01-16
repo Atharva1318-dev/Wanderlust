@@ -1,0 +1,60 @@
+<% layout("/layouts/boilerplate")-%>
+
+    <body>
+        <div class="overlay-background"></div>
+        <div class="row gy-5 form-body">
+            <div class="offset-sm-3 col-sm-6">
+                <form method="post" action="/listings" class="new-form customShadow py-4 px-4 needs-validation"
+                    novalidate enctype="multipart/form-data">
+                    <!--The enctype="multipart/form-data" attribute in an HTML form specifies how the form data should be encoded (prepared) before being sent to the server, To make our form capable of sending files to backend we add the encoding type attribute-->
+                    <h3 class="mb-3 text-center">Create a new Listing</h3>
+                    <hr>
+                    <div class="mb-2">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="title" id="title" class="form-control rounded-4 shadow-sm py-2 cStyle"
+                            placeholder="Enter title" required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <br>
+                    <div class="mb-2">
+                        <label for="image" class="form-label">Upload Image</label>
+                        <input type="file" name="image" id="image" class="form-control rounded-4 shadow-sm py-2 cStyle"
+                            required>
+                        <div class="invalid-feedback">Please upload an image!</div>
+                    </div>
+                    <br>
+                    <div class="mb-2">
+                        <label for="desc" class="form-label">Description</label>
+                        <textarea name="description" id="desc" class="form-control rounded-4 shadow-sm cStyle"
+                            placeholder="Enter description" required></textarea>
+                        <div class="invalid-feedback">Please enter an appropriate description!</div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-4 mb-2">
+                            <label for="price" class="form-label">Price</label>
+                            <input name="price" id="price" class="form-control rounded-4 shadow-sm py-2 cStyle"
+                                placeholder="1200" required>
+                            <div class="invalid-feedback">Please enter a valid price!</div>
+                        </div>
+                        <br>
+                        <div class="col-lg-8 mb-2">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" name="country" id="country"
+                                class="form-control rounded-4 shadow-sm py-2 cStyle" placeholder="eg:India" required>
+                            <div class="invalid-feedback">Please enter the country!</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="mb-2">
+                        <label for="loc" class="form-label">Location</label>
+                        <input type="text" name="location" id="loc" class="form-control rounded-4 shadow-sm py-2 cStyle"
+                            placeholder="eg:Kerela" required>
+                        <div class="invalid-feedback">Please enter a valid location!</div>
+                    </div>
+                    <br>
+                    <button class="btn btn-outline-dark mb-4 shadow-sm new-btn rounded-4 pl-3 offset-5">Add</button>
+                </form>
+            </div>
+        </div>
+    </body>

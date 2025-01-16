@@ -1,0 +1,544 @@
+body {
+    overflow-x: hidden !important;
+    font-family: "Poppins", sans-serif !important;
+    /* background-color: #ffffff; */
+     background: linear-gradient(-135deg, #f7f7f7, #e8e8e8);
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+}
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+}
+
+button.learn-more {
+ width: 12rem;
+ height: auto;
+}
+
+button.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 2.5rem;
+ height: 2.5rem;
+ background: #e83b45;
+ border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 2rem;
+ color: #282936;
+ font-weight: 400;
+ line-height: 0.95;
+ text-align: center;
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+h2{
+    margin-bottom: 1.5rem;
+}
+
+@media(min-width:540px){
+.container-fluid{
+    padding: 0.8rem 2rem 0.8rem 2rem !important;
+    /* padding-left: 0 !important;
+    padding-right: 0 !important; */
+    flex: 1;
+    /* padding: 2rem 4rem 2.5rem 4rem; */
+}
+}
+
+@media(max-width:430px){
+    .container-fluid{
+        justify-content:space-around !important;
+        align-items: center !important;
+    }
+}
+nav{
+    /* box-shadow: 0px 0px 15px rgba(227,228,237,0.27) !important;
+    backdrop-filter: blur(35px) !important; */
+    background:linear-gradient(to top,#ffffff,#f8f9fa) !important;
+    transition: all 0.48s ease !important;
+    padding: 0.3rem !important;
+}
+
+
+.exploreButton {
+  width:137px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color:transparent;
+  border-radius: 30px;
+  color: #ffffff;
+  font-weight: 400;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.116);
+  padding-left: 10px;
+  transition-duration: .5s;
+}
+
+.svgIcon {
+  height: 33px;
+  transition-duration: 1.5s;
+}
+
+.bell path {
+  fill: #ffffff !important;
+}
+
+.exploreButton{
+color:black;
+}
+
+.exploreButton:hover {
+    color: #ffffff;
+  background-color: #e83b45;
+  transition-duration: .5s;
+}
+
+.exploreButton:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+
+.exploreButton:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+}
+
+.fa-compass{
+    color:#e83b45;
+    font-size: 2rem;
+}
+.nav-link{
+     color:black !important; /*important to override bootstrap styling */
+}
+
+footer{
+    background: linear-gradient(to top, #ececec, #d9d9d9);
+    /* background: linear-gradient(135deg, #b0b0b0, #8a8a8a); */
+    margin-top: 3rem;
+    padding: 0.565rem;
+    z-index: 10;
+}
+.f-info{
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.f-info-socials i{
+    font-size: 1.22rem;
+    margin-right: 0.6rem;
+    transition: all 0.18s linear 0s;
+}
+.f-info-socials i:hover{
+    transform: scale(1.1);
+}
+.f-info-brand,.f-info-links,.f-info-socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;  
+}
+.f-info-links a{
+    text-decoration: none;
+    color: black;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.listing-card{
+    padding: 0 !important;
+    background-color:transparent ;
+    /* margin-bottom: 2.5rem; */
+    border-radius: 1.5rem;
+    border: none !important;
+    transition: all 0.15s linear 0s;
+    
+}
+.title{
+    font-size:large;
+    font-weight: 500 !important;
+}
+.listing-card:hover{
+    transform: scale(1.03);
+    box-shadow: 0.1rem 0.6rem 1rem rgba(0, 0, 0, .15);
+
+}
+.listing-card:hover img{   /*To change the property of image when card is hovered*/
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.listing-link{
+    color: black !important;
+    text-decoration: none !important;
+}
+.card a{
+    padding: 0 !important;
+}
+.card-body{
+    padding: 0.75rem 1.45rem 0.75rem 1.45rem !important;
+}
+.listing-card img{
+    width: 100%;
+    border-radius: 1.5rem;
+    /* border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem; */
+    object-fit: cover !important;
+    transition: all 0.19s linear 0s;
+}
+.new-btn{
+    border: none;
+}
+.new-btn:hover{
+    color: #ffff;
+    background-color:#e83b45 !important;
+    border-color: #e83b45;
+}
+.overlay-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./clay-banks-RDg0Xz_KBdY-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.165; /* Dim the background */
+    z-index: 1;
+}
+
+
+.new-form{
+
+    position: relative !important;
+    z-index: 20 !important;
+    border-radius: 1.5rem;
+    background: linear-gradient(-135deg, #f7f7f7, #e8e8e8);
+}
+.form-body{
+    column-gap: 0.5rem !important;
+    padding-bottom: 2rem !important;
+    position: relative !important;
+    z-index: 10;
+}
+/* .edit-btn a:hover{
+    color: #fff !important;
+} */
+.customShadow{
+    box-shadow: 2.5px 8px 10px gray;
+}
+.cStyle{
+    box-shadow: inset 1px 1px 2.8px #282828,
+              inset -5.5px -5.5px 12px #ffffff73 !important;
+}
+.edit-btn-a{
+    text-decoration: none !important;
+}
+.edit-btn:hover a{
+    color: white !important;
+}
+
+/* From Uiverse.io by eirikvold */ 
+#reviewBtn {
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(135deg,#e8e8e8, #f7f7f7);
+  color: black;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.05s;
+}
+
+#reviewBtn:hover {
+    background:#e83b45 !important;
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#reviewBtn:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#reviewBtn span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+#reviewBtn svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+#reviewBtn .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+#reviewBtn:hover .svg-wrapper {
+    background-color: white!important;
+   color: #e83b45;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+#reviewBtn:hover svg {
+   background-color: white!important;
+   color: #e83b45;
+  transform: rotate(45deg);
+}
+
+.review-box{
+    background: transparent !important;
+}
+
+#map {
+height:550px;
+width:64%;
+}
+
+.filters{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.08s linear 0s;
+}
+.filters:hover{
+    opacity: 1;
+}
+
+.checkBox{
+    /* margin-left: 12px !important; */
+    margin-top: -15px;
+    font-size: small;
+    /* width:fit-content;*/
+   padding: 0 1rem 0 1rem !important;
+    height:3rem !important; 
+    border: 1px solid black;
+}
+
+@media(max-width:530px){
+    /* .checkBox{
+        display: block !important;
+    } */
+}
+
+@media(min-width:800px){
+    #searchInp{
+        border-right: transparent !important;
+    padding: 0.5rem 6rem 0.5rem 1rem;
+}
+}
+
+#searchInp:focus{
+    box-shadow: inset 1px 1px 2.8px #282828,
+              inset -5.5px -5.5px 12px #ffffff73 !important;
+}
+
+#searchBtn{
+    background-color: #ffffff;
+    border-left: transparent !important;
+    margin-left: -9.5px;
+}
+
+#searchInp:focus ~ #searchBtn{
+    box-shadow: inset 1px 1px 2.8px #282828,
+              inset -5.5px -5.5px 12px #ffffff73 !important;
+    margin-left: -11px !important;
+}
+
+@media(max-width:769px){
+    .searchInp{
+        border: none;
+        padding: 0 0 0 0.4rem;
+        /* width: 10rem; */
+    }
+    .checkBox{
+        display: block;
+    }
+    #filter{
+        overflow-x: scroll;
+    }
+}
+
+.tax{
+    display: none;
+}
+
+#filter{
+    overflow-x: scroll !important;
+    margin-top: 1rem;
+}
+
+@media(max-width:1224px){
+    .hideFilter{
+        display: none !important;
+    }
+    .checkBox{
+        font-size:x-small !important;
+    }
+}
+
+@media(max-width:768px){
+    .hideOnSmall{
+        display: none;
+    }
+}
+
+@media(max-width:430px){
+    .hideCollapse{
+        display: none;
+    }
+    .nav-div{
+        padding: 0 0 0 0.85rem !important;
+    }
+}
+
+
+.visibleOnSmall{
+    display: none !important;
+}
+
+@media(max-width:430px){
+    .visibleOnSmall{
+        width: 15rem !important;
+        display: inline !important;
+    }
+    #searchInp{
+        width: 10rem !important;
+        font-size: x-small;
+        padding: 0.45rem 0 0.35rem 1rem;
+        display:inline !important;
+    }
+    #searchBtn{
+        margin-left: -0.3rem;
+        font-size: x-small;
+    }
+    .listingCardOnSmall{
+        width:20rem;
+    }
+}
+
+@media(max-width:430px){
+    #map{
+        width:19rem;
+        height: 18rem;
+    }
+}
+
+@media(max-width:540px){
+    .review-box{
+    margin: 0.75rem !important;
+    padding: 0.45rem 0 0.15rem 0; 
+    height: 14rem;
+    width:76%;
+    font-size: smaller;
+}
+.form-body{
+    margin-left: auto;
+}
+.form-body div{
+    width:100% !important;
+}
+    .new-form{
+        font-size: smaller !important;
+    }
+    .new-form input{
+        width:100% !important;
+    }
+    .new-form textarea{
+        width:100% !important;
+    }
+}
+
+@media(max-width:540px){
+.visibleOnSmallBrand{
+    display:inline !important;
+}
+.checkBoxSmall{
+    display: block !important;
+}
+}
+
+
