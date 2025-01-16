@@ -1,4 +1,6 @@
 body {
+    margin: 0 !important;
+    padding: 0 !important;
     overflow-x: hidden !important;
     font-family: "Poppins", sans-serif !important;
     /* background-color: #ffffff; */
@@ -109,9 +111,12 @@ h2{
     .container-fluid{
         justify-content:space-around !important;
         align-items: center !important;
+        /* padding: 0.8rem 0 0.8rem 0 !important; */
     }
+
 }
 nav{
+    /* position: sticky !important; */
     /* box-shadow: 0px 0px 15px rgba(227,228,237,0.27) !important;
     backdrop-filter: blur(35px) !important; */
     background:linear-gradient(to top,#ffffff,#f8f9fa) !important;
@@ -246,7 +251,7 @@ footer{
     padding: 0.75rem 1.45rem 0.75rem 1.45rem !important;
 }
 .listing-card img{
-    width: 100%;
+    width: 100% !important;
     border-radius: 1.5rem;
     /* border-top-right-radius: 1.5rem;
     border-top-left-radius: 1.5rem; */
@@ -473,8 +478,19 @@ width:64%;
     .nav-div{
         padding: 0 0 0 0.85rem !important;
     }
+        .listing-card{
+        margin-left: 0.7rem !important;
+    }
+    nav{
+        margin: 0.75rem 0.1rem 0.75rem 0.1rem !important;
+    }
 }
 
+@media(max-width:412px){
+    .listing-card{
+        margin-left: 0.18rem !important;
+    }
+}
 
 .visibleOnSmall{
     display: none !important;
