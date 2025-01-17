@@ -439,7 +439,7 @@ width:64%;
 #searchBtn{
     background-color: #ffffff;
     border-left: transparent !important;
-    margin-left: -9.5px;
+    margin-left: -9.6px;
 }
 
 #searchInp:focus ~ #searchBtn{
@@ -536,11 +536,17 @@ width:64%;
         display:inline !important;
     }
     #searchBtn{
-        margin-left: -0.3rem;
-        font-size: x-small;
+        border-left: 1px solid black !important;
+        height: 2.025rem !important;
+        margin-left: -0.36rem;
+        margin-bottom: 3.95px !important;
+        font-size: small;
     }
     .listingCardOnSmall{
         width:20.3rem;
+    }
+    .listingCardOnSmall img{
+        width: 100% !important;
     }
         #map{
         width:19rem;
