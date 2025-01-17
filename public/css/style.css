@@ -9,6 +9,18 @@ body {
      flex-direction: column;
      min-height: 100vh;
 }
+@media(max-width:530px){
+    body{
+        font-size: smaller !important;
+    }
+}
+
+@media(max-width:400px){
+    body{
+        font-size:xx-small !important;
+    }
+}
+
 button {
  position: relative;
  display: inline-block;
@@ -395,12 +407,14 @@ width:64%;
 }
 
 .checkBox{
+    text-align: center !important;
+    vertical-align:middle !important;
     /* margin-left: 12px !important; */
-    margin-top: -15px;
+    margin-top: -9px;
     font-size: small;
     /* width:fit-content;*/
-   padding: 0 1rem 0 1rem !important;
-    height:3rem !important; 
+   padding: 0.8rem 1rem 0.8rem 1rem !important;
+    /* height:2.8rem !important;  */
     border: 1px solid black;
 }
 
@@ -567,7 +581,7 @@ width:64%;
     display:inline !important;
 } */
 .checkBoxSmall{
-    display: block !important;
+    margin-top: 9px !important;
 }
 }
 
