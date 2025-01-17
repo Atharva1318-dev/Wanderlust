@@ -1,6 +1,6 @@
 <% layout("/layouts/boilerplate")-%>
     <script>
-        const coordinates = <% - JSON.stringify(listing.geometry.coordinates) %>;// It converts a JavaScript object or value into a JSON string.
+        const coordinates = <%- JSON.stringify(listing.geometry.coordinates) %>;// It converts a JavaScript object or value into a JSON string.
     </script>
 
     <h3 class=" text-center">
@@ -75,7 +75,6 @@
                     </form>
                     <% }%>
         </div>
-
         <%if(currUser){%>
             <hr>
             <form method="post" action="/listings/<%=listing._id%>/reviews" class="needs-validation" novalidate>
