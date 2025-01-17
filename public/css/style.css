@@ -99,6 +99,7 @@ h2{
 
 @media(min-width:540px){
 .container-fluid{
+    overflow-x: hidden !important;
     padding: 0.8rem 2rem 0.8rem 2rem !important;
     /* padding-left: 0 !important;
     padding-right: 0 !important; */
@@ -512,7 +513,7 @@ width:64%;
         font-size: x-small;
     }
     .listingCardOnSmall{
-        width:20rem;
+        width:20.3rem;
     }
 }
 
