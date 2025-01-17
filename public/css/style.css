@@ -543,7 +543,7 @@ width:64%;
         font-size: small;
     }
     .listingCardOnSmall{
-        width:20.3rem;
+        width:100% !important;
     }
     .listingCardOnSmall img{
         width: 100% !important;
