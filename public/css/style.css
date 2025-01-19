@@ -536,7 +536,7 @@ width:64%;
     }
     #searchBtn{
         border-left: 1px solid black !important;
-        height: 2.025rem !important;
+        height: 1.875rem !important;
         margin-left: -0.36rem;
         margin-bottom: 3.95px !important;
         font-size: small;
@@ -1198,4 +1198,40 @@ width:64%;
 #link-circle svg:hover {
   transform: scale(1.25);
   margin: 0.5em;
+}
+
+@media(max-width:430px){
+
+#signup-username-area:hover ~ #background-color {
+  height: 3.5em;
+  transform: translateY(4.5em);
+}
+
+#signup-email-area:hover ~ #background-color {
+  height: 4em;
+  transform: translateY(10em);
+}
+
+#signup-password-area:hover ~ #background-color {
+  height: 4.75em;
+  transform: translateY(14.75em);
+}
+#signup-footer-area:hover ~ #background-color {
+  height: 5em;
+  transform: translateY(20.2em);
+}
+
+#email-area:hover ~ #background-color {
+  height: 4em;
+  transform: translateY(5em);
+}
+#password-area:hover ~ #background-color {
+  height: 6em;
+  transform: translateY(9em);
+}
+
+#footer-area:hover ~ #background-color {
+  height: 6em;
+  transform: translateY(15.2em);
+}
 }

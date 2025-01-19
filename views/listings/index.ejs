@@ -2,7 +2,8 @@
 
     <body>
         <!-- <h2>All Listings</h2> -->
-        <div id="filter" class="d-flex flex-row flex-wrap justify-content-evenly align-items-center w-100">
+        <div id="filter"
+            class="d-flex flex-row flex-wrap justify-content-evenly align-items-center w-100  animate__animated animate__fadeInLeft">
             <div class="filters d-flex flex-column justify-content-center align-items-center">
                 <i class="fa-solid fa-fire fs-5"></i>
                 <p>Trending</p>
@@ -11,10 +12,6 @@
                 <i class="fa-regular fa-snowflake fs-5"></i>
                 <p>Arctic</p>
             </div>
-            <!-- <div class="filters d-flex flex-column justify-content-center align-items-center">
-                <i class="fa-solid fa-bed fs-5"></i>
-                <p>rooms</p>
-            </div> -->
             <div class="filters d-flex flex-column justify-content-center align-items-center">
                 <i class="fa-solid fa-water-ladder fs-5"></i>
                 <p>Amazing pools</p>
@@ -55,7 +52,8 @@
         <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 gx-5 gy-5">
             <%for(listing of allListings){%>
                 <a href="/listings/<%=listing._id%>" class="listing-link">
-                    <div class="listing-card col" style="height: 23.5rem !important;">
+                    <div class="listing-card col animate__animated animate__fadeIn" style="height: 23.5rem !important;"
+                        data-aos="zoom-in">
                         <img src=<%=listing.image.url%> class="card-img-top" alt="listing_image" style="height:
                         16rem;">
                         <div class=" card-body">

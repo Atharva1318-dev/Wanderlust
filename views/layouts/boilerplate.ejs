@@ -19,9 +19,11 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="/css/rating.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.js"></script>
     <link href="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body class="overflow-x-hidden">
@@ -37,7 +39,13 @@
                 crossorigin="anonymous"></script>
             <script src="/js/navbar.js"></script>
             <script src="/js/new.js"></script>
+            <script>
+                AOS.init({
+                    duration: 1300,
+                    easing: 'ease-in-out',
 
+                });
+            </script>
 </body>
 
 

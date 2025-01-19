@@ -9,7 +9,8 @@
     <hr>
     <br>
     <div class="row gap-4 mb-4">
-        <div class="listing-card d-sm-col-7 d-sm-offset-3 mx-auto px-0" style="max-width: 46rem;">
+        <div class="listing-card d-sm-col-7 d-sm-offset-3 mx-auto px-0  animate__animated animate__fadeIn"
+            style="max-width: 46rem;">
             <div id="carouselExample" class="carousel slide listingCardOnSmall">
                 <div class="carousel-inner rounded-4" style="height: 23rem;">
                     <div class="carousel-item active" style="height: 30rem; width: 100%;">
@@ -153,50 +154,5 @@
                             <%}%>
     </div>
     <h4 class="text-center">Where you'll be</h4>
-    <div id="map" class="mx-auto rounded-4 mb-5"></div>
-    <!-- <script>
-        const coordinates = <%- JSON.stringify(listing.geometry.coordinates) %>;
-        console.log(coordinates);
-        const map = new maplibregl.Map({
-            container: 'map', // container id
-            style: {
-                'version': 8,
-                'name': 'Blank',
-                'center': [0, 0],
-                'zoom': 0,
-                'sources': {
-                    'raster-tiles': {
-                        'type': 'raster',
-                        'tiles': ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-                        'tileSize': 256,
-                        'minzoom': 0,
-                        'maxzoom': 19
-                    }
-                },
-                'layers': [
-                    {
-                        'id': 'background',
-                        'type': 'background',
-                        'paint': {
-                            'background-color': '#e0dfdf'
-                        }
-                    },
-                    {
-                        'id': 'simple-tiles',
-                        'type': 'raster',
-                        'source': 'raster-tiles'
-                    }
-                ],
-                'id': 'blank'
-            },
-            center: coordinates,
-            zoom: 11,
-            pitch: 40,
-            bearing: 20,
-            antialias: true
-        });
-        const marker = new maplibregl.Marker({ color: "red" })
-            .setLngLat(coordinates)
-            .addTo(map);
-    </script> -->
+    <div id="map" class="mx-auto rounded-4 mb-5" data-aos="fade-right"></div>
     <script src="/js/map.js"></script>
