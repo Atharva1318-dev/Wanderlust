@@ -1203,22 +1203,22 @@ width:64%;
 @media(max-width:430px){
 
 #signup-username-area:hover ~ #background-color {
-  height: 3.5em;
-  transform: translateY(4.5em);
+  height: 4.5em;
+  transform: translateY(4.9em);
 }
 
 #signup-email-area:hover ~ #background-color {
-  height: 4em;
-  transform: translateY(10em);
+  height: 4.5em;
+  transform: translateY(12em);
 }
 
 #signup-password-area:hover ~ #background-color {
-  height: 4.75em;
-  transform: translateY(14.75em);
+  height: 4.65em;
+  transform: translateY(15.75em);
 }
 #signup-footer-area:hover ~ #background-color {
   height: 5em;
-  transform: translateY(20.2em);
+  transform: translateY(22.2em);
 }
 
 #email-area:hover ~ #background-color {
