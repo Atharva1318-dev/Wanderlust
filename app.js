@@ -83,6 +83,7 @@ app.use((req, res, next) => {
 })
 
 // app.get("/demouser", async (req, res) => {
+
 //     let fakeUser = new User({
 //         email: "student@gmail.com",
 //         username: "atharva"
@@ -90,6 +91,10 @@ app.use((req, res, next) => {
 //     let regUser = await User.register(fakeUser, "helloworld");//this will not only save to db but will also automatically check if the username is unique or not.
 //     res.send(regUser);
 // });
+
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter); // this id is not able to reach the reviewRoutes.js file, it shows undefined there, this id parameter stays here itself, any parameters after this path are able to reach the reviewRoutes.js

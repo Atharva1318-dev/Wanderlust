@@ -11,7 +11,7 @@ body {
 }
 @media(max-width:530px){
     body{
-        font-size: smaller !important;
+        font-size: small !important;
     }
 }
 
@@ -783,7 +783,6 @@ width:64%;
 
 ::placeholder {
   color: #424242;
-  font-weight:500;
 }
 
 .form:hover {
@@ -1209,16 +1208,16 @@ width:64%;
 
 #signup-email-area:hover ~ #background-color {
   height: 4.5em;
-  transform: translateY(12em);
+  transform: translateY(11em);
 }
 
 #signup-password-area:hover ~ #background-color {
   height: 4.65em;
-  transform: translateY(15.75em);
+  transform: translateY(16.75em);
 }
 #signup-footer-area:hover ~ #background-color {
   height: 5em;
-  transform: translateY(22.2em);
+  transform: translateY(23.2em);
 }
 
 #email-area:hover ~ #background-color {
