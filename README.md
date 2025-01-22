@@ -89,21 +89,25 @@ The application uses **MapLibre** for map integration, with the **Nominatim API*
    npm install
 
 4. Create a .env file and add the following variables:
+   
    CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
    CLOUDINARY_API_KEY=your-cloudinary-api-key
    CLOUDINARY_API_SECRET=your-cloudinary-api-secret
    DATABASE_URL=your-mongodb-atlas-url
 
-5. Start the server:
+6. Start the server:
    ```bash
    node index.js
 
 ---
 
 🔮 Future Enhancements
-Advanced Search Filters:
-Implement filters for price range, location proximity, and property type.
-Payment Integration:
-Integrate a secure payment gateway for booking properties.
-User Dashboard:
-Add a personalized dashboard for users to manage their bookings and reviews.
+1. Advanced Search Filters:
+   Implement filters for price range, location proximity, and property type.
+   
+2. Payment Integration:
+   Integrate a secure payment gateway for booking properties.
+   
+3. User Dashboard:
+   Add a personalized dashboard for users to manage their bookings and reviews.
+
