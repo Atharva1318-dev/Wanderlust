@@ -538,7 +538,7 @@ button.learn-more {
  height: auto;
 } */
 .filters{
-  font-size: smaller !important;
+  font-size: small !important;
 }
     .loginOutOnSmall{
         font-size: 15px !important;
