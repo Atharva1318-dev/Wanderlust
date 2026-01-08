@@ -54,6 +54,7 @@ store.on("err", () => {
     console.log("ERROR IN MONGO_ATLAS", err);
 });
 
+
 app.use(session({
     store,
     secret: process.env.SECRET,

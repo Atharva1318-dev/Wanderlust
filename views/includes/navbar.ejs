@@ -43,7 +43,7 @@
                     </button></a>
             </div>
         </div>
-        <%if(currUser){%>
+        <%if(typeof currUser !=='undefined' && currUser){%>
             <a class="nav-link" href="/logout"><i
                     class="fa-solid fa-arrow-right-from-bracket fs-5 loginOutOnSmall animate__animated animate__fadeInRight"></i></a>
             <% } else{%>
