@@ -5,7 +5,14 @@ const geocoderApi = {
         try {
             const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(config.query)
                 }&format=geojson`;
-            const response = await fetch(url); // Await the fetch
+            const response = await fetch(url,
+                {
+                    headers: {
+                        "User-Agent": "WanderlustApp/1.0 (atharvao2005@gmail.com)",
+                        "Accept-Language": "en" // optional but good practice
+                    }
+                }
+            ); // Await the fetch
             const geojson = await response.json(); // Await JSON parsing
 
             return {
