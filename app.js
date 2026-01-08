@@ -22,6 +22,12 @@ const localStrategy = require("passport-local");
 const User = require("./models/user");
 
 app.use(methodOverride('_method'));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
+app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.engine("ejs", ejsMate);
 
 async function main() {
     await mongoose.connect(process.env.ATLASDB_URL);
@@ -34,12 +40,7 @@ main().then((res) => {
         console.log(err);
     });
 
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "/views"));
-app.use(express.static(path.join(__dirname, "/public")));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.engine("ejs", ejsMate);
+
 
 
 const store = MongoStore.create({
@@ -66,6 +67,7 @@ app.use(session({
         httpOnly: true
     }
 }));
+
 app.use(flash());
 
 app.use(passport.initialize());
