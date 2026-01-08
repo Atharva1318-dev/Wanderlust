@@ -7,6 +7,7 @@ Wanderlust is a travel property booking website inspired by Airbnb, designed to 
 ## 🌐 Live Demo
 
 Check out the live version of Wanderlust: https://wanderlust-p701.onrender.com
+(Currently the deployed version is not working, will fix it!)
 
 ---
 
@@ -110,4 +111,5 @@ The application uses **MapLibre** for map integration, with the **Nominatim API*
    
 3. User Dashboard:
    Add a personalized dashboard for users to manage their bookings and reviews.
+
 
